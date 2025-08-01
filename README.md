@@ -1,1 +1,95 @@
 # construction-demo
+
+<!-- Wireframe Structure for Construction Management Software -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Management Wireframe</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f2f2f2; }
+    header, nav, main, footer { padding: 1rem; }
+    header { background: #2c3e50; color: white; }
+    nav { background: #ecf0f1; width: 200px; float: left; height: 100vh; position: fixed; top: 0; left: 0; overflow-y: auto; }
+    nav ul { list-style: none; padding: 0; }
+    nav li { padding: 0.5rem 0; }
+    main { margin-left: 220px; padding: 2rem; background: white; min-height: 100vh; }
+    section { margin-bottom: 2rem; }
+    .card { background: #fff; border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; }
+    h1, h2, h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 0.5rem; text-align: left; }
+    input, select, textarea, button { width: 100%; padding: 0.5rem; margin-top: 0.25rem; margin-bottom: 0.5rem; }
+    @media (max-width: 768px) {
+      nav { width: 100%; height: auto; position: relative; }
+      main { margin-left: 0; padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Project Name - Dashboard</h1></header>
+  <nav>
+    <ul>
+      <li>Dashboard</li>
+      <li>Projects</li>
+      <li>Submittals</li>
+      <li>Schedule</li>
+      <li>RFIs</li>
+      <li>Change Orders</li>
+      <li>Daily Reports</li>
+      <li>Punch List</li>
+      <li>Documents</li>
+      <li>Reminders</li>
+      <li>Users</li>
+      <li>Settings</li>
+    </ul>
+  </nav>
+  <main>
+    <section><h2>Project Overview</h2><div class="card">Progress bar / KPI summaries</div></section>
+    <section><h2>Upcoming Tasks</h2><div class="card">
+      <table><thead><tr><th>Task</th><th>Assigned To</th><th>Start Date</th><th>Due Date</th><th>Status</th></tr></thead>
+      <tbody><tr><td>Install Roof</td><td>John Doe</td><td>08/01</td><td>08/05</td><td>In Progress</td></tr>
+      <tr><td>Window Delivery</td><td>Mary Smith</td><td>08/03</td><td>08/07</td><td>Pending</td></tr></tbody></table>
+    </div></section>
+    <section><h2>Schedule (Gantt Chart)</h2><div class="card">
+      <table><thead><tr><th>Task</th><th>Start</th><th>End</th><th>Timeline</th></tr></thead>
+      <tbody><tr><td>Site Prep</td><td>08/01</td><td>08/03</td><td><div style="background:#3498db;width:30%;height:10px;"></div></td></tr>
+      <tr><td>Framing</td><td>08/04</td><td>08/08</td><td><div style="background:#2ecc71;width:50%;height:10px;"></div></td></tr>
+      <tr><td>Electrical Rough-in</td><td>08/09</td><td>08/12</td><td><div style="background:#f39c12;width:40%;height:10px;"></div></td></tr></tbody></table>
+    </div></section>
+    <section><h2>Submittals</h2><div class="card">
+      <form><label>Submittal Title:</label><input type="text" placeholder="e.g. Roof Membrane Spec">
+      <label>Category:</label><select><option>Product Data</option><option>Shop Drawing</option><option>Sample</option></select>
+      <label>Upload File:</label><input type="file"><label>Notes:</label><textarea placeholder="Add any notes..."></textarea>
+      <button type="submit">Submit</button></form>
+    </div></section>
+    <section><h2>RFIs (Request for Information)</h2><div class="card">
+      <form><label>Subject:</label><input type="text" placeholder="e.g. Clarification on wall type">
+      <label>Question:</label><textarea placeholder="Enter your RFI question..."></textarea>
+      <label>Assigned To:</label><input type="text" placeholder="Architect, Consultant..."><label>Due Date:</label>
+      <input type="date"><button type="submit">Submit RFI</button></form>
+    </div></section>
+    <section><h2>Change Orders</h2><div class="card">
+      <form><label>Title:</label><input type="text" placeholder="e.g. Added canopy at entrance">
+      <label>Description:</label><textarea placeholder="Describe the reason and scope of change..."></textarea>
+      <label>Cost Impact:</label><input type="text" placeholder="$1,200.00">
+      <label>Schedule Impact (days):</label><input type="number" placeholder="e.g. 2">
+      <button type="submit">Submit Change Order</button></form>
+    </div></section>
+    <section><h2>Reminders</h2><div class="card">
+      <ul><li>🔔 Schedule concrete pour on 08/03</li>
+      <li>🔔 Follow up on submittal response by 08/04</li>
+      <li>🔔 Weekly progress meeting on 08/05</li></ul>
+    </div></section>
+    <section><h2>Daily Reports</h2><div class="card">
+      <form><label>Weather:</label><input type="text" placeholder="Sunny, 85°F">
+      <label>Labor on Site:</label><textarea placeholder="List of crews, hours, tasks..."></textarea>
+      <label>Notes:</label><textarea placeholder="Site conditions, deliveries, incidents..."></textarea>
+      <button type="submit">Save Report</button></form>
+    </div></section>
+  </main>
+</body>
+</html>
